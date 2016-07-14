@@ -23,6 +23,16 @@ var androidOpts = {
 
 var wd = require('webdriver-client')(_.merge({}, platform === 'ios' ? iOSOpts : androidOpts));
 
+// override back for ios
+wd.addPromiseChainMethod('customback', function() {
+  if (platform === 'ios') {
+    return this;
+  }
+
+  return this
+    .back();
+});
+
 describe('macaca mobile sample', function() {
   this.timeout(5 * 60 * 1000);
 
@@ -61,6 +71,7 @@ describe('macaca mobile sample', function() {
       .elementByName('list')
       .click()
       .swipe(200, 400, 200, 100, 500)
+      .customback()
       .sleep(1000);
   });
 
