@@ -11,7 +11,7 @@
     "url": "git://github.com/macacajs/macaca-test-sample.git"
   },
   "dependencies": {
-    "macaca-utils": "~0.1.8"
+    "macaca-utils": "^0.1.8"
   },
   "devDependencies": {
     "jshint": "*",
@@ -26,6 +26,5 @@
   "pre-commit": [
     "jshint"
   ],
-  "homepage": "https://github.com/macacajs/macaca-test-sample",
   "license": "MIT"
 }
