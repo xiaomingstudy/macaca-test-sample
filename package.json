@@ -15,7 +15,7 @@
   },
   "devDependencies": {
     "jshint": "*",
-    "macaca-cli": "^1.0.15",
+    "macaca-cli": "^1.1.0",
     "pre-commit": "1.1.1",
     "webdriver-client": "~1.0.0"
   },
