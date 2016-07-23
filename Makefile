@@ -24,21 +24,21 @@ test-android: install
 	macaca doctor
 	platform=android macaca run --verbose -d ./macaca-test/macaca-mobile-sample.test.js
 test-pc:
-	npm install electron --save-dev
+	npm install macaca-electron --save-dev
 	macaca doctor
 	macaca run --verbose -d ./macaca-test/macaca-desktop-sample.test.js
 travis-pc:
-	npm install electron --save-dev
+	npm install macaca-electron --save-dev
 	${npm_bin}/macaca doctor
 	${npm_bin}/macaca run -d ./macaca-test/macaca-desktop-sample.test.js --no-window
 travis: install travis-pc
 	@echo travis passed
 travis-android: install
-	npm install android --save-dev
+	npm install macaca-android --save-dev
 	${npm_bin}/macaca doctor
 	platform=android ${npm_bin}/macaca run --verbose -d ./macaca-test/macaca-mobile-sample.test.js
 travis-ios: install
-	npm install ios --save-dev
+	npm install macaca-ios --save-dev
 	${npm_bin}/macaca doctor
 	platform=ios ${npm_bin}/macaca run --verbose -d ./macaca-test/macaca-mobile-sample.test.js
 jshint:
