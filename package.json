@@ -1,6 +1,6 @@
 {
   "name": "macaca-test-sample",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "macaca-test-sample",
   "keywords": [
     "macaca",
@@ -17,7 +17,8 @@
     "jshint": "*",
     "macaca-cli": "^1.1.0",
     "pre-commit": "1.1.1",
-    "webdriver-client": "~1.0.0"
+    "webdriver-client": "~1.0.0",
+    "xml2map": "^1.0.2"
   },
   "scripts": {
     "test": "make test-pc",

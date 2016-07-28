@@ -2,6 +2,7 @@
 
 var path = require('path');
 var _ = require('macaca-utils');
+var xml2map = require('xml2map');
 
 var platform = process.env.platform || 'iOS';
 platform = platform.toLowerCase();
@@ -61,6 +62,11 @@ describe('macaca mobile sample', function() {
 
   it('#2 should display home', function() {
     return driver
+      .source()
+      .then(res => {
+        var xml = xml2map.tojson(res);
+        console.log(xml);
+      })
       .takeScreenshot();
   });
 
