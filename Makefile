@@ -24,7 +24,6 @@ test-android: install
 	macaca doctor
 	platform=android macaca run --verbose -d ./macaca-test/macaca-mobile-sample.test.js
 test-pc:
-	npm install macaca-electron --save-dev
 	macaca doctor
 	macaca run --verbose -d ./macaca-test/macaca-desktop-sample.test.js
 travis-pc:
