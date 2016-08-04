@@ -76,13 +76,14 @@ describe('macaca mobile sample', function() {
       .click()
       .elementByName('list')
       .click()
-      .swipe(200, 400, 200, 100, 500)
-      .customback()
       .sleep(1000);
   });
 
   it('#4 should display webview', function() {
     return driver
+      .swipe(200, 400, 200, 100, 500)
+      .customback()
+      .sleep(1000)
       .elementByName('Webview')
       .click()
       .sleep(3000)
