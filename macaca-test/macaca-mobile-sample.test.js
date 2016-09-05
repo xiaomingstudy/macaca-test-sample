@@ -56,6 +56,10 @@ describe('macaca mobile sample', function() {
 
   it('#1 should login success', function() {
     return driver
+      .getWindowSize()
+      .then(size => {
+        console.log(`current window size ${JSON.stringify(size)}`);
+      })
       .login('中文+Test+12345678', '111111')
       .sleep(1000);
   });
