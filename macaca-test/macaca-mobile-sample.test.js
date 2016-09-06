@@ -76,6 +76,16 @@ describe('macaca mobile sample', function() {
 
   it('#3 should scroll tableview', function() {
     return driver
+      .elementByName('list')
+      .getProperty('origin')
+      .then(origin => {
+        console.log(`list element origin:${JSON.stringify(origin)}`);
+      })
+      .elementByName('list')
+      .getProperty('size')
+      .then(size => {
+        console.log(`list element size:${JSON.stringify(size)}`);
+      })
       .elementByName('HOME')
       .click()
       .elementByName('list')
