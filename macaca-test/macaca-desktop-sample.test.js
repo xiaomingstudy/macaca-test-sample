@@ -14,6 +14,7 @@ describe('macaca desktop sample', function() {
   before(() => {
     return driver
       .initDriver()
+      .maximize()
       .setWindowSize(1280, 800);
   });
 
