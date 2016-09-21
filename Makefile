@@ -11,6 +11,7 @@ test:
 	@echo "make test-android         Test sample for Android"
 	@echo "make test-android-chrome  Test sample for Android Chrome"
 	@echo "make test-pc              Test sample for PC"
+	@echo "make custom-reporter      Test sample for PC with custom reporter"
 test-ios: install
 	macaca doctor
 	platform=ios macaca run --verbose -d ./macaca-test/macaca-mobile-sample.test.js
@@ -40,6 +41,9 @@ travis-ios: install
 	npm install macaca-ios --save-dev
 	${npm_bin}/macaca doctor
 	platform=ios ${npm_bin}/macaca run --verbose -d ./macaca-test/macaca-mobile-sample.test.js
+custom-reporter:
+	macaca doctor
+	CUSTOM_DIR=macaca-logs/macaca-desktop-sample macaca run --verbose -d ./macaca-test/macaca-desktop-sample.test.js --reporter macaca-simple-reportor
 jshint:
 	@${npm_bin}/jshint .
 .PHONY: test

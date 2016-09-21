@@ -7,6 +7,6 @@ examples/
 .jshintrc
 .jshintignore
 coverage/
+macaca-logs/
 *.sw*
-logs/
 *.un~

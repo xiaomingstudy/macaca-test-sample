@@ -16,6 +16,7 @@
   "devDependencies": {
     "jshint": "*",
     "macaca-cli": "^1.1.0",
+    "macaca-simple-reportor": "*",
     "pre-commit": "1.1.1",
     "webdriver-client": "~1.0.0",
     "xml2map": "^1.0.2"

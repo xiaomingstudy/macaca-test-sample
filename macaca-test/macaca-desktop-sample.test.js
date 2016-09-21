@@ -46,7 +46,7 @@ describe('macaca desktop sample', function() {
       .elementById('su')
       .click()
       .sleep(5000)
-      .takeScreenshot();
+      .saveScreenshot('pic1');
   });
 
   it('#2 should go into web', function() {
@@ -67,7 +67,7 @@ describe('macaca desktop sample', function() {
       .then(function(html) {
         html.should.containEql('TesterHome');
       })
-      .takeScreenshot();
+      .saveScreenshot('pic2');
   });
 
   after((done) => {
