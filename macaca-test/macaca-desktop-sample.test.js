@@ -58,14 +58,14 @@ describe('macaca desktop sample', function() {
   it('#3 should works with web', function() {
     return driver
       .elementById('kw')
-      .sendKeys('TesterHome')
+      .sendKeys('Macaca')
       .sleep(3000)
       .elementById('su')
       .click()
       .sleep(5000)
       .source()
       .then(function(html) {
-        html.should.containEql('TesterHome');
+        html.should.containEql('Macaca');
       })
       .saveScreenshot('pic2');
   });
