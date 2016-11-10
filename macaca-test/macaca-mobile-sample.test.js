@@ -8,15 +8,16 @@ var platform = process.env.platform || 'iOS';
 platform = platform.toLowerCase();
 
 var iOSOpts = {
-  platformVersion: '9.3',
   deviceName: 'iPhone 5s',
   platformName: 'iOS',
+  //udid: '',
   //bundleId: 'xudafeng.ios-app-bootstrap',
   app: path.join(__dirname, '..', 'app', `${platform}-app-bootstrap.zip`)
 };
 
 var androidOpts = {
   platformName: 'Android',
+  //udid: '',
   //package: 'com.github.android_app_bootstrap',
   //activity: 'com.github.android_app_bootstrap.activity.WelcomeActivity',
   app: path.join(__dirname, '..', 'app', `${platform}-app-bootstrap.zip`)
@@ -40,7 +41,7 @@ describe('macaca mobile sample', function() {
   var driver = wd.initPromiseChain();
 
   driver.configureHttp({
-    timeout: 600000
+    timeout: 600 * 1000
   });
 
   before(function() {

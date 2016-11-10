@@ -6,7 +6,6 @@ var browserName = process.env.browser || 'safari';
 browserName = browserName.toLowerCase();
 
 var iOSSafariOpts = {
-  platformVersion: '10.0',
   deviceName: 'iPhone 5s',
   platformName: 'iOS',
   browserName: 'Safari'
