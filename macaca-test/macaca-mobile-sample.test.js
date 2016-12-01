@@ -4,7 +4,7 @@ var path = require('path');
 var _ = require('macaca-utils');
 var xml2map = require('xml2map');
 
-var platform = process.env.platform || 'iOS';
+var platform = process.env.platform || 'Android';
 platform = platform.toLowerCase();
 
 var iOSOpts = {
@@ -72,7 +72,8 @@ describe('macaca mobile sample', function() {
         var xml = xml2map.tojson(res);
         console.log(xml);
       })
-      .takeScreenshot();
+      .takeScreenshot()
+      .saveScreenshot('1.png');
   });
 
   it('#3 should scroll tableview', function() {
